@@ -2,78 +2,44 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+// var FontAwesome = require('react-fontawesome')
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fab, faGhost)
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
     return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+      <React.Fragment>
+        <section class="hero is-fullheight has-bg-img">
+          <div class="hero-body">
+            <div class="container" id="main_content">
+              <div class="columns is-pulled-left">
+                <div class="column">
+                  <span class="title has-text-light is-size-1" id="page_title">
+                    The Blk Nrd
+                  </span>
                 </div>
-              ))}
+            </div>
+              <div class="columns is-pulled-right">
+                <div class="column">
+                    <a href="#"><FontAwesomeIcon className="social_icon" icon={['fab', 'facebook']} size="4x" color="white"/></a>
+                </div>
+                <div class="column">
+                  <a href="#"><FontAwesomeIcon className="social_icon" icon={['fab', 'instagram']} size="4x" color="white"/></a>
+                </div>
+                <div class="column">
+                  <a href="#"><FontAwesomeIcon className="social_icon" icon={['fab', 'twitter']} size="4x" color="white"/></a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-      </Layout>
+    </React.Fragment>
+
     )
   }
 }
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
