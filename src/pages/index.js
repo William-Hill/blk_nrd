@@ -7,7 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import logo from '../img/logo.svg'
+import logo from '../img/Logo1.svg'
 
 library.add(fab, faGhost)
 
@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
                 <div class="column">
                   <Link to="/" className="navbar-item">
                     <figure className="image">
-                      <img src={logo} alt="blk_nrd" style={{ width: '450px' }} />
+                      <img src={logo} alt="blk_nrd" style={{ width: '400px' }} />
                     </figure>
                   </Link>
                 </div>
