@@ -20,9 +20,9 @@ export default class IndexPage extends React.Component {
             <div class="container" id="main_content">
               <div class="columns is-pulled-left">
                 <div class="column">
-                  <Link to="/" className="navbar-item">
+                  <Link to="/" id="index_link" className="navbar-item">
                     <figure className="image">
-                      <img src={logo} alt="blk_nrd" style={{ width: '400px' }} />
+                      <img id="blk_nrd_logo" src={logo} alt="blk_nrd" style={{ width: '400px', height: '400px' }} />
                     </figure>
                   </Link>
                 </div>
