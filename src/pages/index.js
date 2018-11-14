@@ -1,14 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import { Link } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import logo from '../img/Logo1.svg'
 
-library.add(fab, faGhost)
+library.add(fab)
 
 export default class IndexPage extends React.Component {
   render() {
@@ -47,7 +44,6 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
     </React.Fragment>
-
     )
   }
 }
