@@ -36,9 +36,11 @@ export default class IndexPage extends React.Component {
                 <div class="column">
                   <a href="https://www.youtube.com/channel/UCtrsF6jWS8_qG7mqwrD85JQ?view_as=subscriber"><FontAwesomeIcon className="social_icon" icon={['fab', 'youtube']} size="3x" color="white"/></a>
                 </div>
-                <Link className="navbar-item" to="/blog">
-                  <span className="is-size-2" style={{color: "white"}}>Blog</span>
-                </Link>
+                {/*
+                  <Link className="navbar-item" to="/blog">
+                    <span className="is-size-2" style={{color: "white"}}>Blog</span>
+                  </Link>
+                */}
               </div>
             </div>
           </div>

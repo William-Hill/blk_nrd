@@ -20,9 +20,12 @@ const Navbar = () => (
       <div className="navbar-start">
       </div>
       <div className="navbar-end">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
+        {/*
+          <Link className="navbar-item" to="/about">
+            About
+          </Link>
+          */
+        }
         <div class="column">
             <a href="https://www.facebook.com/theblknrd/?modal=admin_todo_tour"><FontAwesomeIcon className="social_icon" icon={['fab', 'facebook']} size="2x" color="black"/></a>
         </div>
