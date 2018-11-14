@@ -1,15 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
-// var FontAwesome = require('react-fontawesome')
+import { Link } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import logo from '../img/Logo1.svg'
 
-library.add(fab, faGhost)
+library.add(fab)
 
 export default class IndexPage extends React.Component {
   render() {
@@ -29,23 +25,27 @@ export default class IndexPage extends React.Component {
             </div>
               <div class="columns is-pulled-right">
                 <div class="column">
-                    <a href="https://www.facebook.com/theblknrd/?modal=admin_todo_tour"><FontAwesomeIcon className="social_icon" icon={['fab', 'facebook']} size="4x" color="white"/></a>
+                    <a href="https://www.facebook.com/theblknrd/?modal=admin_todo_tour"><FontAwesomeIcon className="social_icon" icon={['fab', 'facebook']} size="3x" color="white"/></a>
                 </div>
                 <div class="column">
-                  <a href="https://www.instagram.com/theblknrd/?hl=en"><FontAwesomeIcon className="social_icon" icon={['fab', 'instagram']} size="4x" color="white"/></a>
+                  <a href="https://www.instagram.com/theblknrd/?hl=en"><FontAwesomeIcon className="social_icon" icon={['fab', 'instagram']} size="3x" color="white"/></a>
                 </div>
                 <div class="column">
-                  <a href="https://twitter.com/theblknrd"><FontAwesomeIcon className="social_icon" icon={['fab', 'twitter']} size="4x" color="white"/></a>
+                  <a href="https://twitter.com/theblknrd"><FontAwesomeIcon className="social_icon" icon={['fab', 'twitter']} size="3x" color="white"/></a>
                 </div>
                 <div class="column">
-                  <a href="https://www.youtube.com/channel/UCtrsF6jWS8_qG7mqwrD85JQ?view_as=subscriber"><FontAwesomeIcon className="social_icon" icon={['fab', 'youtube']} size="4x" color="white"/></a>
+                  <a href="https://www.youtube.com/channel/UCtrsF6jWS8_qG7mqwrD85JQ?view_as=subscriber"><FontAwesomeIcon className="social_icon" icon={['fab', 'youtube']} size="3x" color="white"/></a>
                 </div>
+                {/*
+                  <Link className="navbar-item" to="/blog">
+                    <span className="is-size-2" style={{color: "white"}}>Blog</span>
+                  </Link>
+                */}
               </div>
             </div>
           </div>
         </section>
     </React.Fragment>
-
     )
   }
 }
