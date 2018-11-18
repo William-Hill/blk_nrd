@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import logo from '../img/Logo2.svg'
+import logo from '../img/Logo2.png'
 
 library.add(fab)
 
@@ -13,7 +13,7 @@ const Navbar = () => (
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           <figure className="image">
-            <img src={logo} alt="blk_nrd_logo" style={{ width: '350px', height: '400px' }} />
+            <img id="navbar_logo" src={logo} alt="blk_nrd_logo" style={{ width: '350px', height: '400px' }} />
           </figure>
         </Link>
       </div>
