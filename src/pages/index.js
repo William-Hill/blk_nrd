@@ -1,10 +1,14 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import Layout from '../components/Layout';
-import logo from '../img/Logo1.png';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import logo from '../img/Logo1.png'
+import ico from '../img/favicon-32x32.png'
+
 
 library.add(fab);
 
@@ -12,6 +16,9 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Helmet title="The Blk Nrd" link={[
+      { rel: 'shortcut icon', type: 'image/png', sizes: '32x32', href: `${ico}` }
+      ]}/>
         <section class="hero is-fullheight has-bg-img">
           <div class="hero-body">
             <div class="container" id="main_content">
