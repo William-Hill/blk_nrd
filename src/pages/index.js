@@ -38,7 +38,7 @@ export default class IndexPage extends React.Component {
                     <span aria-hidden="true"></span>
                   </a>
                 </div>
-                <div class="navbar-menu">
+                <div id="index_navbar_menu" class="navbar-menu">
                   <div class="navbar-end">
                     <Link className="navbar-item has-text-white is-size-3" to="/about">
                       About
