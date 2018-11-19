@@ -45,6 +45,8 @@ $primary-invert: $kaldi-red-invert
 
 #main_content
   margin-bottom: auto
+  width: 100%
+  // background-color: #151a24
 
 @media (max-width: 600px)
   .social_icon
@@ -56,6 +58,7 @@ $primary-invert: $kaldi-red-invert
 #blk_nrd_logo
   pointer-events: none
   max-height: 3.15em
+  width: 18rem
 
 #index_link
   pointer-events: none
@@ -64,11 +67,21 @@ $primary-invert: $kaldi-red-invert
 #logo-column
   padding-left: 0px
 
-@media screen and (min-width: 1280px)
-  #main_content
-    max-width: 1220px
+// @media screen and (min-width: 1280px)
+//   #main_content
+//     max-width: 1220px
+
+@media screen and (max-width: 1024px)
+  #blk_nrd_logo
+    width: 9rem
 
 #navbar_logo
   max-height: 2.75em
+
+.social_icon_nav
+  padding-bottom: 2em
+
+#index_navbar_menu.is-active
+  background-color: black
 
 @import "~bulma"
